@@ -1,0 +1,22 @@
+
+Prompt :Generate a contact book that allows users to manage their personal contacts 
+(a bit like a little digital address book) with django: 1.create a project call contactbook
+Create a call contacts app
+Configure settings.py, create templates, and create the contact model using its parameters: class Contact(models.Model):
+ first_name = models.CharField(max_length=50)
+ last_name = models.CharField(max_length=50)
+ phone_number = models.CharField(max_length=20)
+ email = models.EmailField()
+ address = models.TextField(blank=True)
+ created_at = 
+models.DateTimeField(auto_now_add=True)
+ def __str__(self):
+ return f“{self.first_name} {self.last_name}”. Create a pretty view that displays all contacts and sorts them by name.
+Use a nice HTML page to display them.
+ Add a search field that sorts contacts by name. Create a ContactForm
+Add a view to create a contact.
+ Create a beautiful template with a form that can add a contact image. Add a View to modify an existing contact,
+Add a view to delete a contact (with action links in the list page.) Create and display a detailed contact sheet. 
+ Add a “Back” button to the list. Group contacts into three categories: favorites (add birthday reminders to all favorites), family, friends. Add more specific pagination and comments, and a “Back” button.
+
+Translated with DeepL.com (free version)

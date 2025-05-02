@@ -1,0 +1,120 @@
+/* Styles généraux */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+}
+
+/* Styles de la navbar */
+.navbar {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+/* Styles des cartes de contact */
+.contact-card {
+  transition: transform 0.2s;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+}
+
+.contact-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles des badges de catégorie */
+.category-badge {
+  font-size: 0.8rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 15px;
+}
+
+.category-fav {
+  background-color: #ffc107;
+  color: #000;
+}
+
+.category-fam {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.category-fri {
+  background-color: #17a2b8;
+  color: #fff;
+}
+
+/* Styles du formulaire */
+.form-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles des boutons */
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 5px;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+/* Styles de la page de détail */
+.contact-detail {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info {
+  margin-top: 1.5rem;
+}
+
+.contact-info p {
+  margin-bottom: 0.5rem;
+}
+
+/* Styles de la recherche */
+.search-container {
+  margin-bottom: 2rem;
+}
+
+.search-input {
+  border-radius: 20px;
+  padding-left: 1.5rem;
+}
+
+/* Styles de la pagination */
+.pagination {
+  margin-top: 2rem;
+}
+
+.page-link {
+  color: #007bff;
+}
+
+.page-item.active .page-link {
+  background-color: #007bff;
+  border-color: #007bff;
+}

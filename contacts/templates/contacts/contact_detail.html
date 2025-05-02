@@ -1,0 +1,46 @@
+{% extends 'contacts/base.html' %}
+
+{% block title %}Détails de {{ contact.first_name }} {{ contact.last_name }}{% endblock %}
+
+{% block content %}
+<div class="contact-detail">
+    <div class="row">
+        <div class="col-md-4 text-center">
+            {% if contact.image %}
+            <img src="{{ contact.image.url }}" alt="{{ contact.first_name }} {{ contact.last_name }}"
+                class="contact-image mb-3">
+            {% else %}
+            <div class="contact-image mb-3 bg-light d-flex align-items-center justify-content-center">
+                <i class="fas fa-user fa-3x text-muted"></i>
+            </div>
+            {% endif %}
+
+            <h2>{{ contact.first_name }} {{ contact.last_name }}</h2>
+            <span class="category-badge category-{{ contact.category|lower }}">
+                {{ contact.get_category_display }}
+            </span>
+        </div>
+
+        <div class="col-md-8">
+            <div class="contact-info">
+                <h4>Informations de contact</h4>
+                <p><strong>Téléphone:</strong> {{ contact.phone_number }}</p>
+                <p><strong>Email:</strong> {{ contact.email }}</p>
+                {% if contact.address %}
+                <p><strong>Adresse:</strong> {{ contact.address }}</p>
+                {% endif %}
+                {% if contact.birthday %}
+                <p><strong>Date de naissance:</strong> {{ contact.birthday|date:"d/m/Y" }}</p>
+                {% endif %}
+                <p><strong>Date d'ajout:</strong> {{ contact.created_at|date:"d/m/Y H:i" }}</p>
+            </div>
+
+            <div class="mt-4">
+                <a href="{% url 'contacts:contact_update' contact.pk %}" class="btn btn-primary">Modifier</a>
+                <a href="{% url 'contacts:contact_delete' contact.pk %}" class="btn btn-outline-danger">Supprimer</a>
+                <a href="{% url 'contacts:contact_list' %}" class="btn btn-outline-secondary">Retour à la liste</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
